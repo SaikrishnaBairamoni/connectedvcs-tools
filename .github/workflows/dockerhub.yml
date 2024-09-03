@@ -5,6 +5,7 @@ on:
     branches:
       - develop
       - master
+      - webapp_open
       - "release/*"
     tags:
       - "*" 
