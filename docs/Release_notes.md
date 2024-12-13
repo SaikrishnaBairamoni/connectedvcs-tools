@@ -1,6 +1,63 @@
 Map Tool Release Notes
 ----------------------------
 
+Version 2.1.0, released Dec 25th, 2024
+----------------------------------------
+### **Summary**
+This release focuses on compliance with the 2024 J2735 standard, integration of J2945/A RGA messages, and significant security improvements to the MAP Tool. Updates include enhancements to the UI, security fixes, and new message generation capabilities.
+
+## **Existing Repository: connectedvcs-tools**
+
+### **Enhancements**
+
+#### **Epic MAP-124**: MAP Tool UI Improvements for J2735 2024 Standard
+- **Summary**: Updated the MAP Tool to comply with the 2024 J2735 version. Added the following features:
+  - Road Regulator ID
+  - Road Authority ID
+  - Speed Limits by lane  
+  - Includes bug fixes to improve functionality.  
+- **Pull Requests**: #30, #34, #12, #29, #26, #16, #17, #28  
+- **Known Issues**: None  
+- **Story MAP-227**: Occasionally saving child map dialog popup multiple times.  
+
+#### **Epic MAP-148**: Implement J2945/A RGA Base Layer Message with the ISD Tool
+- **Summary**: Updated the ISD Tool to support J2945/A RGA-encoded base layer messages, allowing users to generate updated JSON messages with RGA base layer details and encode them.  
+- **Pull Requests**: #21, #68, #24, #66, #36, #45, #33, #19, #49, #22, #50  
+- **Known Issues**: None  
+- **Story MAP-226**: Out of range for RoadAuthorityID and mapped geometry ID when entering the value `4294967295`.  
+
+#### **Epic MAP-163**: Integrate J2945/A RGA Base Layer Message with ISD Message Creator UI
+- **Summary**: Enhanced the ISD Tool UI to generate both J2735 MAP and J2945/A RGA-encoded JSON messages.  
+- **Pull Requests**: #31, #27, #67  
+- **Known Issues**: None  
+- **Story MAP-141**: Update MAP Tool Deployment Documentation.  
+
+### **Fixes**
+
+#### **Epic MAP-203**: 2024 Fall Security Fix
+- **Summary**: Addressed a critical issue where the MAP Tool could no longer load map tiles from Bing due to abnormal API key usage. Applied security fixes include:  
+  - Switching to Google Maps API for elevation data  
+  - Backend monitoring of API calls  
+  - Adding protection from bots and DDoS attacks  
+  - Redeployed the MAP Tool ahead of the 10/28/2024 Plugfest.  
+- **Pull Requests**: #57  
+- **Known Issues**: None  
+- **GitHub**: None  
+
+#### **Additional Pull Requests** (No Associated Epic)
+- Revert "Sync master (Hotfix 2.0.1) into develop" ([#54](https://github.com/usdot-fhwa-stol/connectedvcs-tools/pull/54))  
+- Sync Develop with Master Branch ([#11](https://github.com/usdot-fhwa-stol/connectedvcs-tools/pull/11))  
+- Fixed Conditional ([#71](https://github.com/usdot-fhwa-stol/connectedvcs-tools/pull/71))  
+- Sync Hotfix from Master into Develop ([#65](https://github.com/usdot-fhwa-stol/connectedvcs-tools/pull/65))  
+- Sync Master (Hotfix 2.0.1) into Develop ([#53](https://github.com/usdot-fhwa-stol/connectedvcs-tools/pull/53))  
+- Revert "Sync Master into Develop" ([#59](https://github.com/usdot-fhwa-stol/connectedvcs-tools/pull/59))  
+- Sync Master into Develop ([#56](https://github.com/usdot-fhwa-stol/connectedvcs-tools/pull/56))  
+- Modified: docs/Docker_Instructions.md ([#32](https://github.com/usdot-fhwa-stol/connectedvcs-tools/pull/32))  
+
+## **Known Issues**
+No known issues unrelated to the provided Jira epics or stories.
+
+
 Version 2.0.0, released April 25th, 2024
 ----------------------------------------
 
